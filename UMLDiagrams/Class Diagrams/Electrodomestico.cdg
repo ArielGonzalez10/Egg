@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Entidad">
+  <ClassDiagramComponents>
+    <Class name="Electrodomestico" package="Entidad" visibility="public" isAbstract="true" xPosition="62.0" yPosition="-10.0">
+      <Fields>
+        <Field name="precio" type="float" visibility="protected"/>
+        <Field name="peso" type="float" visibility="protected"/>
+        <Field name="color" type="String" visibility="protected"/>
+        <Field name="consEnergetico" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="float" name="precio"/>
+          <Argument type="float" name="peso"/>
+          <Argument type="String" name="color"/>
+          <Argument type="String" name="consEnergetico"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getPrecio" returnType="float" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="float" name="precio"/>
+        </Method>
+        <Method name="getPeso" returnType="float" visibility="public"/>
+        <Method name="setPeso" returnType="void" visibility="public">
+          <Argument type="float" name="peso"/>
+        </Method>
+        <Method name="getColor" returnType="String" visibility="public"/>
+        <Method name="setColor" returnType="void" visibility="public">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="getConsEnergetico" returnType="String" visibility="public"/>
+        <Method name="setConsEnergetico" returnType="void" visibility="public">
+          <Argument type="String" name="consEnergetico"/>
+        </Method>
+        <Method name="consumoEnergetico" returnType="void" visibility="public" isAbstract="true">
+          <Argument type="String" name="letra"/>
+        </Method>
+        <Method name="comprobarColor" returnType="void" visibility="public" isAbstract="true">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="crearElectrodomestico" returnType="void" visibility="public" isAbstract="true">
+          <Argument type="float" name="precio"/>
+          <Argument type="float" name="peso"/>
+          <Argument type="String" name="color"/>
+          <Argument type="String" name="consEnergetico"/>
+        </Method>
+        <Method name="calculoImporteTotal" returnType="float" visibility="public" isAbstract="true">
+          <Argument type="ArrayList&lt;Electrodomestico&gt;" name="elec"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Lavadora" package="Entidad" visibility="public" xPosition="39.0" yPosition="554.0">
+      <Fields>
+        <Field name="carga" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="carga"/>
+          <Argument type="float" name="precio"/>
+          <Argument type="float" name="peso"/>
+          <Argument type="String" name="color"/>
+          <Argument type="String" name="consEnergetico"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCarga" returnType="int" visibility="public"/>
+        <Method name="setCarga" returnType="void" visibility="public">
+          <Argument type="int" name="carga"/>
+        </Method>
+        <Method name="getPrecio" returnType="float" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="float" name="precio"/>
+        </Method>
+        <Method name="getPeso" returnType="float" visibility="public"/>
+        <Method name="setPeso" returnType="void" visibility="public">
+          <Argument type="float" name="peso"/>
+        </Method>
+        <Method name="getColor" returnType="String" visibility="public"/>
+        <Method name="setColor" returnType="void" visibility="public">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="getConsEnergetico" returnType="String" visibility="public"/>
+        <Method name="setConsEnergetico" returnType="void" visibility="public">
+          <Argument type="String" name="consEnergetico"/>
+        </Method>
+        <Method name="consumoEnergetico" returnType="void" visibility="public">
+          <Argument type="String" name="letra"/>
+        </Method>
+        <Method name="comprobarColor" returnType="void" visibility="public">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="precioFinal" returnType="float" visibility="public">
+          <Argument type="Electrodomestico" name="electro"/>
+        </Method>
+        <Method name="crearElectrodomestico" returnType="void" visibility="public">
+          <Argument type="float" name="precio"/>
+          <Argument type="float" name="peso"/>
+          <Argument type="String" name="color"/>
+          <Argument type="String" name="consEnergetico"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="calculoImporteTotal" returnType="float" visibility="public">
+          <Argument type="ArrayList&lt;Electrodomestico&gt;" name="elec"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Televisor" package="Entidad" visibility="public" xPosition="714.0" yPosition="362.0">
+      <Fields>
+        <Field name="resolucion" type="float" visibility="private"/>
+        <Field name="sintonizadorTdt" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="float" name="resolucion"/>
+          <Argument type="float" name="precio"/>
+          <Argument type="float" name="peso"/>
+          <Argument type="String" name="color"/>
+          <Argument type="String" name="consEnergetico"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getResolucion" returnType="float" visibility="public"/>
+        <Method name="setResolucion" returnType="void" visibility="public">
+          <Argument type="float" name="resolucion"/>
+        </Method>
+        <Method name="isSintonizadorTdt" returnType="boolean" visibility="public"/>
+        <Method name="setSintonizadorTdt" returnType="void" visibility="public">
+          <Argument type="boolean" name="sintonizadorTdt"/>
+        </Method>
+        <Method name="getPrecio" returnType="float" visibility="public"/>
+        <Method name="setPrecio" returnType="void" visibility="public">
+          <Argument type="float" name="precio"/>
+        </Method>
+        <Method name="getPeso" returnType="float" visibility="public"/>
+        <Method name="setPeso" returnType="void" visibility="public">
+          <Argument type="float" name="peso"/>
+        </Method>
+        <Method name="getColor" returnType="String" visibility="public"/>
+        <Method name="setColor" returnType="void" visibility="public">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="getConsEnergetico" returnType="String" visibility="public"/>
+        <Method name="setConsEnergetico" returnType="void" visibility="public">
+          <Argument type="String" name="consEnergetico"/>
+        </Method>
+        <Method name="consumoEnergetico" returnType="void" visibility="public">
+          <Argument type="String" name="letra"/>
+        </Method>
+        <Method name="comprobarColor" returnType="void" visibility="public">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="precioFinal" returnType="float" visibility="public">
+          <Argument type="Electrodomestico" name="electro"/>
+        </Method>
+        <Method name="crearElectrodomestico" returnType="void" visibility="public">
+          <Argument type="float" name="pPrecio"/>
+          <Argument type="float" name="pPeso"/>
+          <Argument type="String" name="pColor"/>
+          <Argument type="String" name="pConsEnergetico"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="calculoImporteTotal" returnType="float" visibility="public">
+          <Argument type="ArrayList&lt;Electrodomestico&gt;" name="elec"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Entidad.Lavadora" target="Entidad.Electrodomestico"/>
+    <UseRelation source="Entidad.Electrodomestico" target="Entidad.Electrodomestico" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Entidad.Televisor" target="Entidad.Electrodomestico"/>
+    <UseRelation source="Entidad.Televisor" target="Entidad.Electrodomestico" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Entidad.Lavadora" target="Entidad.Electrodomestico" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
